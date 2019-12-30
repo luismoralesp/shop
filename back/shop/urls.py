@@ -9,6 +9,7 @@ from rest_framework.permissions import AllowAny
 api_urlpatterns = [
     path('api/', include([
         path('', include('api.commons.urls')),
+        path('orders/', include('api.orders.urls')),
     ])),
 ]
 

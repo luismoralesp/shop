@@ -1,6 +1,6 @@
 from django.db import models
 from api.commons.models import BaseModel
-from . import Client
+from .client import Client
 from ..constants import OrderStatus
 
 class Order(BaseModel):
