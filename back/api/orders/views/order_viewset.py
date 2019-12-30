@@ -17,11 +17,22 @@ class OrderViewSet(BaseModelViewSet):
         'create': OrderCreationSerializer
     }
 
+    filterset_fields = [
+        'status',
+        'client__uuid',
+        'client__name',
+        'client__surname',
+        'client__email',
+        'client__document',
+        'client__documentType',
+        'client__documentType',
+    ]
+
     default_serializer_class = OrderOutputSerializer
 
     queryset = Order.objects.all()
 
-    http_method_names = ['post']
+    http_method_names = ['post', 'get']
 
     @swagger_auto_schema(responses={200: OrderOutputSerializer()} )
     def create(self, request, *args, **kwargs):
