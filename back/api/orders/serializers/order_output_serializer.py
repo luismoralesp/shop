@@ -11,5 +11,7 @@ class OrderOutputSerializer(serializers.ModelSerializer):
         fields = (
             'uuid',
             'status',
-            'client'
+            'client',
+            'created_at',
+            'updated_at'
         )

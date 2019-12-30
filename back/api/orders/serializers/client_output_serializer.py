@@ -6,11 +6,6 @@ class ClientOutputSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
         fields = (
-            'uuid',
-            'document',
-            'documentType',
-            'name',
-            'surname',
-            'mobile',
+            '__all__'
         )
 
